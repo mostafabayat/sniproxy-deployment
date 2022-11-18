@@ -1,0 +1,14 @@
+version: '3'
+services:
+    sni-proxy:
+        image: ghcr.io/mosajjal/sniproxy:v0.9.0
+        container_name: sni-proxy
+        restart: always
+        ports:
+            - '80:80'
+            - '443:443'
+            - '53:53/udp'
+        volumes:
+            - './:/tmp/'
+        command: --domainListPath /tmp/domains.csv --publicIP '85.239.63.69'
+        #command: --allDomains --publicIP '85.239.63.69'
