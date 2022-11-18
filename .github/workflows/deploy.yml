@@ -1,0 +1,11 @@
+name: deploy
+run-name: ${{ github.actor }} is deploying!
+on: 
+  push:
+    branches:
+      - 'master'
+jobs:
+  test:
+    runs-on: England
+    steps:
+      - run: sudo /opt/scripts/test.sh
