@@ -6,6 +6,6 @@ on:
       - 'master'
 jobs:
   test:
-    runs-on: England
+    runs-on: foreign
     steps:
       - run: sudo /opt/scripts/test.sh
