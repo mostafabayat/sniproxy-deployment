@@ -8,4 +8,4 @@ jobs:
   test:
     runs-on: foreign
     steps:
-      - run: sudo /opt/scripts/test.sh
+      - run: sudo /opt/scripts/sniproxy-update
