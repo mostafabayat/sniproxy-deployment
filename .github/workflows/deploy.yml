@@ -19,5 +19,6 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     needs: test
+    name: debug mode ${{ needs.test.outputs.status }}
     steps:
       - run: echo ${{ needs.test.outputs.status }}
