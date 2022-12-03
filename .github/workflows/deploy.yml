@@ -11,3 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "MOSI=deployed" >> $GITHUB_ENV
+      - run: echo ${{ env.MOSI }}
