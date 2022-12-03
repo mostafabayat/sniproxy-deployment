@@ -8,7 +8,7 @@ env:
   MOSI: "deploying"
 jobs:
   test:
-    runs-on: foreign
+    runs-on: ubuntu-latest
     steps:
       - run: sudo /opt/scripts/sniproxy-update
       - run: echo "MOSI=deployed" >> $GITHUB_ENV
