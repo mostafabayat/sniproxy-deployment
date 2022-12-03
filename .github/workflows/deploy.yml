@@ -9,6 +9,7 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: debug mode ${{ env.MOSI }}
     steps:
       - run: echo "MOSI=deployed" >> $GITHUB_ENV
       - run: echo ${{ github.env.MOSI }}
