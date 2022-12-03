@@ -16,5 +16,5 @@ jobs:
       - run: echo "MOSI=deployed" >> $GITHUB_ENV
       - name: status
         id: status_step
-        run: echo "status=enabled" >> $GITHUB_OUTPUT
+        run: echo "status=$STATUS" >> $GITHUB_OUTPUT
       - run: echo ${{ needs.test.outputs.status }}
