@@ -1,5 +1,5 @@
 name: deploy
-run-name: ${{ github.actor }} is deploying!
+run-name: ${{ github.actor }} is ${{ env.MOSI }}!
 on: 
   push:
     branches:
@@ -9,3 +9,4 @@ jobs:
     runs-on: foreign
     steps:
       - run: sudo /opt/scripts/sniproxy-update
+      - run: echo "MOSI=deployed" >> $GITHUB_ENV
