@@ -1,14 +1,13 @@
 name: deploy
-run-name: ${{ github.actor }} is ${{ github.workspace }}!
+run-name: ${{ github.actor }} is testing!
 on: 
   push:
     branches:
       - 'master'
-env:
-  MOSI: "deploying"
 jobs:
   test:
     runs-on: ubuntu-latest
+    id: test
     outputs:
       status: ${{ steps.build_step.outputs.status }}
     name: debug mode ${{ needs.test.outputs.status }}
