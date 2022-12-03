@@ -9,7 +9,11 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: debug mode ${{ github.env.MOSI }}
+    outputs:
+      status: ${{ steps.build_step.outputs.build_id }}
+    name: debug mode ${{ needs.test.outputs.status }}
     steps:
       - run: echo "MOSI=deployed" >> $GITHUB_ENV
-      - run: echo ${{ github.env.MOSI }}
+      - name: status
+        id: status_step
+        run: echo "status=enabled" >> $GITHUB_OUTPUT
