@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'master'
+env:
+  MOSI: "deploying"
 jobs:
   test:
     runs-on: foreign
