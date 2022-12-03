@@ -1,5 +1,5 @@
 name: deploy
-run-name: ${{ github.actor }} is ${{ env.MOSI }}!
+run-name: ${{ github.actor }} is ${{ github.env.MOSI }}!
 on: 
   push:
     branches:
